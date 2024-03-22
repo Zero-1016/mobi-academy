@@ -1,0 +1,37 @@
+{
+  "name": "mobi-academy",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "build:admin": "turbo build --filter=admin",
+    "build:apply": "turbo build --filter=apply",
+    "build:community": "turbo build --filter=community",
+    "dev": "turbo dev",
+    "dev:admin": "turbo dev --filter=admin",
+    "dev:apply": "turbo dev --filter=apply",
+    "dev:community": "turbo dev --filter=community",
+    "lint": "turbo lint",
+    "lint:admin": "turbo lint --filter=admin",
+    "lint:apply": "turbo lint --filter=apply",
+    "lint:community": "turbo lint --filter=community",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
+    "storybook:admin": "turbo storybook --filter=admin",
+    "storybook:apply": "turbo storybook --filter=apply",
+    "storybook:community": "turbo storybook --filter=community",
+    "storybook:ui": "turbo storybook --filter=ui"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
